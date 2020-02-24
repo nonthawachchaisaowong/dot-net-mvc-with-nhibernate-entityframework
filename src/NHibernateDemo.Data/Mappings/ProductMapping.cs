@@ -1,7 +1,7 @@
 ﻿using FluentNHibernate.Mapping;
 using NHibernateDemo.Domain.Entities;
 
-namespace NHibernateDemo.DAL.Mappings
+namespace NHibernateDemo.Domain.Mappings
 {
     public sealed class ProductMapping : ClassMap<Product>
     {

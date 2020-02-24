@@ -283,17 +283,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NHibernateDemo.BLL\NHibernateDemo.BLL.csproj">
-      <Project>{64F859A4-1FB4-4E85-855A-C0F648C3686E}</Project>
-      <Name>NHibernateDemo.BLL</Name>
+    <ProjectReference Include="..\NHibernateDemo.Data\NHibernateDemo.Data.csproj">
+      <Project>{2B0D0C44-EE9E-4213-AA39-3B19F66500D9}</Project>
+      <Name>NHibernateDemo.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NHibernateDemo.Core\NHibernateDemo.Domain.csproj">
+    <ProjectReference Include="..\NHibernateDemo.Domain\NHibernateDemo.Domain.csproj">
       <Project>{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}</Project>
       <Name>NHibernateDemo.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NHibernateDemo.DAL\NHibernateDemo.DAL.csproj">
-      <Project>{2B0D0C44-EE9E-4213-AA39-3B19F66500D9}</Project>
-      <Name>NHibernateDemo.DAL</Name>
+    <ProjectReference Include="..\NHibernateDemo.Services\NHibernateDemo.Services.csproj">
+      <Project>{64F859A4-1FB4-4E85-855A-C0F648C3686E}</Project>
+      <Name>NHibernateDemo.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

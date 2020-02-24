@@ -7,8 +7,8 @@
     <ProjectGuid>{2B0D0C44-EE9E-4213-AA39-3B19F66500D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NHibernateDemo.DAL</RootNamespace>
-    <AssemblyName>NHibernateDemo.DAL</AssemblyName>
+    <RootNamespace>NHibernateDemo.Data</RootNamespace>
+    <AssemblyName>NHibernateDemo.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -62,7 +62,7 @@
     <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NHibernateDemo.Core\NHibernateDemo.Domain.csproj">
+    <ProjectReference Include="..\NHibernateDemo.Domain\NHibernateDemo.Domain.csproj">
       <Project>{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}</Project>
       <Name>NHibernateDemo.Domain</Name>
     </ProjectReference>

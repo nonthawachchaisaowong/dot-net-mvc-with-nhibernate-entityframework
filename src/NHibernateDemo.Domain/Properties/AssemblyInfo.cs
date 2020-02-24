@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NHibernateDemo.DAL")]
+[assembly: AssemblyTitle("NHibernateDemo.Domain")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NHibernateDemo.DAL")]
+[assembly: AssemblyProduct("NHibernateDemo.Domain")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2b0d0c44-ee9e-4213-aa39-3b19f66500d9")]
+[assembly: Guid("a69e42cb-7e1c-49e0-98c7-9d82b953afc6")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -2,7 +2,7 @@
 using FluentNHibernate.Automapping.Alterations;
 using NHibernateDemo.Domain.Entities;
 
-namespace NHibernateDemo.DAL.MappingOverrides
+namespace NHibernateDemo.Domain.MappingOverrides
 {
     public class ProductOverrides : IAutoMappingOverride<Product>
     {

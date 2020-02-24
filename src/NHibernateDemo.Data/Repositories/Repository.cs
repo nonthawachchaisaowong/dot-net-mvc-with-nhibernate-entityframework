@@ -1,13 +1,10 @@
 ﻿using NHibernate;
 using NHibernate.Linq;
-using NHibernateDemo.DAL.Helpers;
 using NHibernateDemo.Domain.Entities;
 using NHibernateDemo.Domain.Helpers;
-using NHibernateDemo.Domain.Repositories;
-
 using System.Linq;
 
-namespace NHibernateDemo.DAL.Repositories
+namespace NHibernateDemo.Domain.Repositories
 {
     public class Repository<T> : IRepository<T> where T : IEntity
     {

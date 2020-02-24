@@ -10,13 +10,11 @@ namespace NHibernateDemo.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using DAL.Helpers;
     using Domain.Helpers;
-    using BLL.Services;
-    using Core.Services;
     using Domain.Repositories;
     using Domain.Entities;
-    using DAL.Repositories;
+    using Domain.Services;
+    using Services;
 
     public static class NinjectWebCommon 
     {

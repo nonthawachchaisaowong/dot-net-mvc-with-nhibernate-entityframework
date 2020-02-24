@@ -3,11 +3,10 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
-using NHibernateDemo.DAL.MappingOverrides;
 using NHibernateDemo.Domain.Entities;
-using NHibernateDemo.Domain.Helpers;
+using NHibernateDemo.Domain.MappingOverrides;
 
-namespace NHibernateDemo.DAL.Helpers
+namespace NHibernateDemo.Domain.Helpers
 {
     public class UnitOfWork : IUnitOfWork
     {

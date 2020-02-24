@@ -1,7 +1,7 @@
 ﻿using NHibernateDemo.Domain.Entities;
 using System.Collections.Generic;
 
-namespace NHibernateDemo.Core.Services
+namespace NHibernateDemo.Domain.Services
 {
     public interface IProductService
     {

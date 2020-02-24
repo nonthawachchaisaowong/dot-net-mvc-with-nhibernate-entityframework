@@ -1,9 +1,8 @@
 ﻿using FluentNHibernate.Automapping;
 using NHibernateDemo.Domain.Entities;
-
 using System;
 
-namespace NHibernateDemo.DAL.Helpers
+namespace NHibernateDemo.Domain.Helpers
 {
     public class AutomappingConfiguration : DefaultAutomappingConfiguration
     {

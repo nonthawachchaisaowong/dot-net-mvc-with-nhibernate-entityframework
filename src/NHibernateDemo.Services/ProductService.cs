@@ -1,10 +1,12 @@
-﻿using NHibernateDemo.Core.Services;
+﻿
 using NHibernateDemo.Domain.Entities;
 using NHibernateDemo.Domain.Repositories;
+using NHibernateDemo.Domain.Services;
+
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NHibernateDemo.BLL.Services
+namespace NHibernateDemo.Services
 {
     public class ProductService : IProductService
     {

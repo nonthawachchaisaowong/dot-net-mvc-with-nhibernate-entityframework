@@ -1,5 +1,5 @@
-﻿using NHibernateDemo.Core.Services;
-using NHibernateDemo.Domain.Entities;
+﻿using NHibernateDemo.Domain.Entities;
+using NHibernateDemo.Domain.Services;
 using System.Web.Mvc;
 
 namespace NHibernateDemo.Controllers
