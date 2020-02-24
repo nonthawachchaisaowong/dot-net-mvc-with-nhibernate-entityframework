@@ -67,16 +67,14 @@ namespace NHibernateDemo.App_Start
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
-        {          
+        {
+            //Ensures that the same IUnitOfWork instance will be used everywhere within a single request
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
 
-            kernel.Bind<IRepository<Product>>().To<Repository<Product>>().InRequestScope();
-            kernel.Bind<IRepository<Category>>().To<Repository<Category>>().InRequestScope();
+            kernel.Bind<IRepository<Product>>().To<Repository<Product>>();
+            kernel.Bind<IRepository<Category>>().To<Repository<Category>>();
 
-            kernel.Bind<IProductService>().To<ProductService>().InRequestScope();
-
-            // default binding for everything except unit of work
-           // kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
+            kernel.Bind<IProductService>().To<ProductService>();   
         }        
     }
 }
