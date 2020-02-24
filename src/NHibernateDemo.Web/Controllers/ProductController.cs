@@ -4,24 +4,36 @@ using System.Web.Mvc;
 
 namespace NHibernateDemo.Controllers
 {
-    public class ProductController : Controller
+    public class ProductController : BaseController
     {
         private readonly IProductService _productService;
 
         public ProductController(IProductService productService)
-        {
+        {  
             _productService = productService;
         }
 
-        public ActionResult List()
+        public ActionResult Index()
         {
-            var products = _productService.GetAllProducts();
+            var products = _productService.GetAll();
             return View(products);
         }
 
-        public ActionResult Add()
-        {
+        public ActionResult Create()
+        {  
             return View();
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var product = _productService.GetById(id);
+            return View(product);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var product = _productService.GetById(id);
+            return View(product);
         }
 
         [HttpPost]
@@ -29,9 +41,32 @@ namespace NHibernateDemo.Controllers
         {
             if (ModelState.IsValid)
             {
-                _productService.AddProduct(product);
+                _productService.Create(product);
             }
-            return View();
+
+           return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Remove(int id)
+        {
+            if (ModelState.IsValid)
+            {
+                _productService.Delete(id);
+            }
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public ActionResult Update(Product product)
+        {
+            if (ModelState.IsValid)
+            {
+                _productService.Update(product);
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

@@ -5,11 +5,10 @@ namespace NHibernateDemo.Core.Services
 {
     public interface IProductService
     {
-        void AddProduct(Product product);
-        void RemoveProduct(Product productId);
-        Product GetProduct(int productId);
-        IEnumerable<Product> GetAllProducts();
-        IEnumerable<Product> GetAllProductsByCategory(int categoryId);
-        IEnumerable<Category> GetAllCategory();
+        IList<Product> GetAll();
+        Product GetById(int id);
+        void Create(Product product);
+        void Update(Product product);
+        void Delete(int id);
     }
 }

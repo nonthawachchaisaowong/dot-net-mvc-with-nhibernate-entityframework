@@ -2,50 +2,45 @@
 using NHibernateDemo.Domain.Entities;
 using NHibernateDemo.Domain.Repositories;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NHibernateDemo.BLL.Services
 {
     public class ProductService : IProductService
     {
-        private readonly IProductRepository _productRepository;
+        private IRepository<Product> _productRepository;
 
-        public ProductService(IProductRepository productService)
+        public ProductService(IRepository<Product> productRepository)
         {
-            _productRepository = productService;
+            _productRepository = productRepository;
         }
 
-        public void AddProduct(Product product)
+        public IList<Product> GetAll()
         {
-            _productRepository.Add(product);
+            return _productRepository
+                .GetAll()
+                .ToList();
         }
 
-        public void RemoveProduct(Product productId)
+        public Product GetById(int id)
         {
-            _productRepository.Remove(productId);
+            return _productRepository.GetById(id);
         }
 
-        public Product GetProduct(int productId)
+        public void Create(Product product)
         {
-            var product = new Product { Id = productId };
-            return product;
+            _productRepository.Create(product);
         }
 
-        public IEnumerable<Product> GetAllProducts()
+        public void Update(Product product)
         {
-            var products = _productRepository.GetAll();
-            return products;
+            _productRepository.Update(product);
         }
 
-        public IEnumerable<Product> GetAllProductsByCategory(int categoryId)
+        public void Delete(int id)
         {
-            var products = _productRepository.GetAllProductsByCategoryQuery(categoryId);
-            return products;
+            _productRepository.Delete(id);
         }
 
-        public IEnumerable<Category> GetAllCategory()
-        {
-            var categories = _productRepository.GetAllCategoriesQuery();
-            return categories;
-        }
     }
 }

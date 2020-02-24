@@ -10,6 +10,13 @@ namespace NHibernateDemo.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
+    using DAL.Helpers;
+    using Domain.Helpers;
+    using BLL.Services;
+    using Core.Services;
+    using Domain.Repositories;
+    using Domain.Entities;
+    using DAL.Repositories;
 
     public static class NinjectWebCommon 
     {
@@ -60,7 +67,16 @@ namespace NHibernateDemo.App_Start
         /// </summary>
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
-        {
+        {          
+            kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
+
+            kernel.Bind<IRepository<Product>>().To<Repository<Product>>().InRequestScope();
+            kernel.Bind<IRepository<Category>>().To<Repository<Category>>().InRequestScope();
+
+            kernel.Bind<IProductService>().To<ProductService>().InRequestScope();
+
+            // default binding for everything except unit of work
+           // kernel.Bind(x => x.FromAssembliesMatching("*").SelectAllClasses().Excluding<UnitOfWork>().BindDefaultInterface());
         }        
     }
 }
