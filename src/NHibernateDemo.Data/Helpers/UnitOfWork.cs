@@ -4,6 +4,7 @@ using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using NHibernateDemo.Domain.Entities;
+using NHibernateDemo.Domain.Helpers;
 using NHibernateDemo.Domain.MappingOverrides;
 
 namespace NHibernateDemo.Domain.Helpers

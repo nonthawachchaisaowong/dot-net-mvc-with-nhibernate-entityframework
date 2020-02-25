@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateDemo.Services", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateDemo.Domain", "NHibernateDemo.Domain\NHibernateDemo.Domain.csproj", "{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateDemo.WebApi", "NHibernateDemo.WebApi\NHibernateDemo.WebApi.csproj", "{B34EE629-A3F9-4098-B5CD-7FB3A3FB3A4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34EE629-A3F9-4098-B5CD-7FB3A3FB3A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34EE629-A3F9-4098-B5CD-7FB3A3FB3A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34EE629-A3F9-4098-B5CD-7FB3A3FB3A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34EE629-A3F9-4098-B5CD-7FB3A3FB3A4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

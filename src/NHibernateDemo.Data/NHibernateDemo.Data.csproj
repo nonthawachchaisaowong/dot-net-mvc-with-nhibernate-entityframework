@@ -62,13 +62,13 @@
     <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NHibernateDemo.Domain\NHibernateDemo.Domain.csproj">
       <Project>{A69E42CB-7E1C-49E0-98C7-9D82B953AFC6}</Project>
       <Name>NHibernateDemo.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
